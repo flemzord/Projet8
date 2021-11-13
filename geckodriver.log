@@ -1,0 +1,25 @@
+1636038925303	geckodriver	INFO	Listening on 127.0.0.1:45949
+1636038925317	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "51369" "-no-remote" "-profile" "/tmp/rust_mozprofilej8nPHJ"
+1636038928731	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilej8nPHJ/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51369/devtools/browser/62004140-5b45-42de-8563-56977704bb2c
+1636038935311	Marionette	INFO	Listening on port 42655
+1636038935450	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1636038937607	Marionette	INFO	Stopped listening on port 42655
+JavaScript error: resource://gre/modules/UrlClassifierListManager.jsm, line 691: TypeError: this.tablesData[table] is undefined
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+1636709921348	geckodriver	INFO	Listening on 127.0.0.1:52999
+1636709921761	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "49541" "-no-remote" "-profile" "/tmp/rust_mozprofilev6OzXF"
+Running Firefox as root in a regular user's session is not supported.  ($XDG_RUNTIME_DIR is /run/user/1000 which is owned by daniel.)
+1636709972383	geckodriver	INFO	Listening on 127.0.0.1:38651
+1636709972396	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "35649" "-no-remote" "-profile" "/tmp/rust_mozprofileJCM4tX"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1636709976317	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileJCM4tX/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:35649/devtools/browser/c7a88640-0579-46cf-b1e3-351a84892455
+1636709983511	Marionette	INFO	Listening on port 44707
+1636709983631	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1636709996089	Marionette	INFO	Stopped listening on port 44707
