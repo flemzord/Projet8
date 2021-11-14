@@ -9,7 +9,12 @@ pipeline {
     stage('test') {
       steps {
         sh 'python3 dftg.py'
-      }   
+      }
+      post {
+        always {
+          junit 'test-reports/*.xml'
+        }
+      }    
     }
   }
 }
