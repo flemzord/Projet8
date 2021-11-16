@@ -1,12 +1,27 @@
 pipeline {
-  agent { docker { image 'python:3.8.10' } }
+  agent any
   stages {
-    stage('build') {
+    stage('deps') {
       steps {
-        sh 'pip3 install -r requirements.txt'
+        sh 'composer install -n'
       }
     }
-    stage('test') {
+    stage('tests:unit') {
+      steps {
+        sh 'php -d date.timezone=UTC ./vendor/bin/phpunit -c tests/Unit/phpunit.xml'
+      }
+    }
+    stage('build') {
+      steps {
+        sh 'docker-compose build'
+      }
+    }
+    stage('launch') {
+      steps {
+        sh 'docker-compose up -d'
+      }
+    }
+    stage('tests:functional') {
       steps {
         sh 'python3 dftg.py'
       }
@@ -16,5 +31,10 @@ pipeline {
         }
       }    
     }
+    post {
+      always {
+         sh "docker-compose down || true"
+      }
+   }   
   }
 }
