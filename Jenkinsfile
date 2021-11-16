@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('deps') {
       steps {
-        sh 'composer install -n'
+        sh 'COMPOSER_MEMORY_LIMIT=-1 composer install --ansi --prefer-dist --no-interaction --no-progress'
       }
     }
     stage('tests:unit') {
